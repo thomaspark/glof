@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GLOF: Glitchy golf game inspired by QWOP</title>
+    <meta property="og:title" content="GLOF: Glitchy golf game inspired by QWOP" />
+    <meta property="og:type" content="website" />
+    <meta property="og:URL" content="https://thomaspark.co/projects/glof/" />
+    <meta property="og:image" content="https://thomaspark.co/projects/glof/glof.png" />
+    <meta property="og:description" content="GLOF is a glitchy golf game where you try to swing the club and hit the ball as far as possible, inspired by the physics of QWOP." />
+    <style>
+      body {
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100dvh;
+        background-color: #f0f0f0;
+      }
+
+      canvas {
+        width: 800px;
+        height: 600px;
+        background-color: #16565d;
+      }
+
+      footer {
+        height: 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-sizing: border-box;
+        width: 800px;
+        padding: 0.5rem 1rem;
+        background-color: #16565d;
+        font-size: 0.8em;
+        font-family: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
+        font-weight: bold;
+        color: #fff;
+      }
+
+      footer a {
+        display: inline-block;
+        margin-left: 5px;
+        color: #fff;
+        text-decoration: none;
+      }
+
+      footer img {
+        width: 18px;
+      }
+    </style>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1FBVRL5ZJT"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-1FBVRL5ZJT');
+    </script>
+  </head>
+  <body>
+    <canvas id="app"></canvas>
+    <footer>
+      <span>
+        &copy;<a target="_blank" href="https://thomaspark.co/projects/">Thomas Park</a>
+      </span>
+      <span>
+        <a target="_blank" href="https://x.com/thomashpark">
+          <img src="social/x-twitter.svg">
+        </a>
+        <a target="_blank" href="https://github.com/thomaspark">
+          <img src="social/github-alt.svg">
+        </a>
+      </span>
+    </footer>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

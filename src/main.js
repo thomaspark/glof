@@ -53,6 +53,7 @@ function preload() {
     this.load.audio('shot', './shot.wav');
     this.load.audio('thud', './thud.mp3');
     this.load.audio('wood', './wood.mp3');
+    this.load.audio('wind', './wind.mp3');
     this.load.image('background', './background.png');
 }
 
@@ -327,6 +328,11 @@ function create() {
     var shot = this.sound.add('shot');
     var thud = this.sound.add('thud');
     var wood = this.sound.add('wood');
+    var wind = this.sound.add('wind', {volume: 0.35});
+
+    wind.loop = true;
+    wind.play();
+
     this.matter.world.on('collisionstart', function (event, bodyA, bodyB) {
         if (
             (bodyA.label === 'club' && bodyB.label === 'ball') || 
